@@ -4,7 +4,13 @@
   "description": "",
   "main": "dist/magic-print.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "make all",
+    "test": "make test",
+    "lint": "make lint",
+    "lint:fix": "make lint-fix",
+    "prepack": "make build",
+    "preversion": "make qa",
+    "qa": "make qa"
   },
   "keywords": [],
   "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
@@ -13,5 +19,19 @@
   "bugs": {
     "url": "https://github.com/liquid-labs/magic-print/issues"
   },
-  "homepage": "https://github.com/liquid-labs/magic-print#readme"
+  "homepage": "https://github.com/liquid-labs/magic-print#readme",
+  "dependencies": {
+    "@liquid-labs/terminal-text": "^1.0.0-alpha.3",
+    "json-colorizer": "^2.2.2",
+    "prettyoutput": "^1.2.0",
+    "wrap-text-plus": "^1.0.0-alpha.8"
+  },
+  "devDependencies": {
+    "@liquid-labs/sdlc-resource-babel-and-rollup": "^1.0.0-alpha.8",
+    "@liquid-labs/sdlc-resource-eslint": "^1.0.0-alpha.11",
+    "@liquid-labs/sdlc-resource-jest": "^1.0.0-alpha.7"
+  },
+  "_comply": { 
+    "orgKey": "@liquid-labs" 
+  }
 }

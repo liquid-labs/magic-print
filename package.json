@@ -1,6 +1,6 @@
 {
   "name": "magic-print",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "",
   "main": "dist/magic-print.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "@liquid-labs/sdlc-resource-eslint": "^1.0.0-alpha.11",
     "@liquid-labs/sdlc-resource-jest": "^1.0.0-alpha.7"
   },
-  "_comply": { 
-    "orgKey": "@liquid-labs" 
+  "_comply": {
+    "orgKey": "@liquid-labs"
   }
 }

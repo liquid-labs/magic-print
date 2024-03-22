@@ -4,6 +4,8 @@ import { wrap } from 'wrap-text-plus'
 
 import { formatTerminalText } from '@liquid-labs/terminal-text'
 
+import { assignIfDefined } from './assign-if-defined'
+
 const getPrinter = (options) => {
   return (...outputs) => {
     print(options, ...outputs)
@@ -16,7 +18,7 @@ const print = (options, ...outputs) => {
     const lastOutput = outputs[outputs.length - 1]
     if (typeof lastOutput === 'object' && lastOutput.__magicPrintOptions === true) {
       const overrideOptions = outputs.pop()
-      effectiveOptions = Object.assign({}, options, overrideOptions)
+      effectiveOptions = assignIfDefined({}, options, overrideOptions)
     }
   }
 

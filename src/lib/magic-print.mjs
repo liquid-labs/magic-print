@@ -11,7 +11,7 @@ const getPrinter = (options) => {
 }
 
 const print = (options, ...outputs) => {
-  let effectiveOptions = options
+  let effectiveOptions = options || {}
   if (outputs.length > 1) {
     const lastOutput = outputs[outputs.length - 1]
     if (typeof lastOutput === 'object' && lastOutput.__magicPrintOptions === true) {
@@ -46,7 +46,7 @@ const print = (options, ...outputs) => {
       }
     } // then it's a string
     else {
-      out.write(wrap(formatTerminalText(output), { noColor, width }))
+      out.write(wrap(formatTerminalText(output, { noColor }), { width }))
     }
 
     first = false

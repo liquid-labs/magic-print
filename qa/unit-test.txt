@@ -1,0 +1,17 @@
+Test git rev: c99e708f68cd655600e78a07cbee251528527b3c
+PASS lib/test/magic-print.test.js
+  getPrinter's print function
+    ✓ wraps text to 80 columns by default (17 ms)
+
+-----------------|---------|----------|---------|---------|-------------------
+File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------|---------|----------|---------|---------|-------------------
+All files        |   84.31 |    33.33 |     100 |   76.47 |                   
+ magic-print.mjs |   82.22 |    33.33 |     100 |   73.33 | 16-19,37,41-44    
+ string-out.mjs  |     100 |      100 |     100 |     100 |                   
+-----------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.423 s, estimated 1 s
+Ran all test suites.

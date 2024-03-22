@@ -40,7 +40,7 @@ const print = (options, ...outputs) => {
     if (typeof output !== 'string') {
       if (format === 'json') {
         out.write(colorizeJSON(output, { pretty : true, colors : { NULL_LITERAL : 'grey' } }))
-      } else if (format === 'yaml') {
+      } else { // YAML by default
         out.write(colorizeYAML(output, { colors : { keys : 'magenta', number : 'green', string : 'yellow', true : 'cyan', false : 'cyan' } }))
       }
     } else { // then it's a string

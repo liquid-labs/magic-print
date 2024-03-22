@@ -1,0 +1,17 @@
+Test git rev: f29fa0571d4037c143c27299129fccb0897d56b1
+PASS lib/test/assign-if-defined.test.js
+PASS lib/test/magic-print.test.js
+-----------------------|---------|----------|---------|---------|-------------------
+File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------------|---------|----------|---------|---------|-------------------
+All files              |   87.87 |    42.85 |     100 |   81.39 |                   
+ assign-if-defined.mjs |     100 |    71.42 |     100 |     100 | 2-4               
+ magic-print.mjs       |    82.6 |    33.33 |     100 |   74.19 | 18-21,39,43-46    
+ string-out.mjs        |     100 |      100 |     100 |     100 |                   
+-----------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 2 passed, 2 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.271 s, estimated 1 s
+Ran all test suites.

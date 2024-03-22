@@ -1,11 +1,11 @@
 const StringOut = class {
   #string = ''
 
-  write(chunk) {
+  write (chunk) {
     this.#string += chunk
   }
 
-  get string() {
+  get string () {
     return this.#string
   }
 }

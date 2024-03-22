@@ -21,13 +21,13 @@ const print = (options, ...outputs) => {
   }
 
   const {
-    colors, 
-    format, 
-    noColor = false, 
-    out = process.stdout, 
-    rawText = false, 
-    separator = '\n', 
-    style,
+    // colors,
+    format,
+    noColor = false,
+    out = process.stdout,
+    // rawText = false,
+    separator = '\n',
+    // style,
     width = 80
   } = effectiveOptions
 
@@ -39,13 +39,11 @@ const print = (options, ...outputs) => {
 
     if (typeof output !== 'string') {
       if (format === 'json') {
-        out.write(colorizeJSON(output, { pretty: true, colors: { NULL_LITERAL: 'grey' } }))
+        out.write(colorizeJSON(output, { pretty : true, colors : { NULL_LITERAL : 'grey' } }))
+      } else if (format === 'yaml') {
+        out.write(colorizeYAML(output, { colors : { keys : 'magenta', number : 'green', string : 'yellow', true : 'cyan', false : 'cyan' } }))
       }
-      else if (format === 'yaml') {
-        out.write(colorizeYAML(output, { colors: { keys: 'magenta', number: 'green', string: 'yellow', true: 'cyan', false: 'cyan' }}))
-      }
-    } // then it's a string
-    else {
+    } else { // then it's a string
       out.write(wrap(formatTerminalText(output, { noColor }), { width }))
     }
 

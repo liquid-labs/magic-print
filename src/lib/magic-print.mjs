@@ -6,10 +6,14 @@ import { formatTerminalText } from '@liquid-labs/terminal-text'
 
 import { assignIfDefined } from './assign-if-defined'
 
-const getPrinter = (options) => {
-  return (...outputs) => {
+const getPrinter = (options = {}) => {
+  const boundPrint = (...outputs) => {
     print(options, ...outputs)
   }
+
+  boundPrint.width = options.width || 80
+
+  return boundPrint
 }
 
 const print = (options, ...outputs) => {

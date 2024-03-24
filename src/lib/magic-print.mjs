@@ -5,6 +5,7 @@ import { wrap } from 'wrap-text-plus'
 import { formatTerminalText } from '@liquid-labs/terminal-text'
 
 import { assignIfDefined } from './assign-if-defined'
+import { isFormatObject } from './lib/is-format-object'
 
 const getPrinter = (options = {}) => {
   const boundPrint = (...outputs) => {

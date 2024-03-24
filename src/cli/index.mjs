@@ -6,6 +6,6 @@ const obj = { a : 'b', b : 12, c : true, d : [false, 'abc', 123], null : null, u
 
 print('JSON:', obj)
 
-print('YAML:', obj, { __magicPrintOptions : true, format : 'yaml' })
+print('YAML:', obj, { format : 'yaml' })
 
 print('<red>red<blue>blue<rst>')

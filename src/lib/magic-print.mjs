@@ -48,7 +48,10 @@ const print = (options, ...outputs) => {
       if (format === 'json') {
         out.write(colorizeJSON(output, { pretty : true, colors : { NULL_LITERAL : 'grey' } }))
       } else { // YAML by default
-        out.write(colorizeYAML(output, { colors : { keys : 'magenta', number : 'green', string : 'yellow', true : 'cyan', false : 'cyan' } }))
+        const yamlOutput = colorizeYAML(output,
+          { colors : { keys : 'magenta', number : 'green', string : 'yellow', true : 'cyan', false : 'cyan' } })
+          .trim() // colorizeYAML ends with a newline, which is counter to the workings of colorizeJSON and text
+        out.write(yamlOutput)
       }
     } else { // then it's a string
       out.write(wrap(formatTerminalText(output, { noColor }), { width }))

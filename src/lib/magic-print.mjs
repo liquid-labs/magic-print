@@ -20,7 +20,7 @@ const print = (options, ...outputs) => {
   let effectiveOptions = options || {}
   if (outputs.length > 1) {
     const lastOutput = outputs[outputs.length - 1]
-    if (typeof lastOutput === 'object' && lastOutput.__magicPrintOptions === true) {
+    if (isFormatObject(lastOutput)) {
       const overrideOptions = outputs.pop()
       effectiveOptions = assignIfDefined({}, options, overrideOptions)
     }

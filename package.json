@@ -23,6 +23,7 @@
   "dependencies": {
     "@liquid-labs/terminal-text": "^1.0.0-alpha.3",
     "json-colorizer": "^2.2.2",
+    "lodash": "^4.17.21",
     "prettyoutput": "^1.2.0",
     "wrap-text-plus": "^1.0.0-alpha.8"
   },

@@ -5,6 +5,7 @@ import { wrap } from 'wrap-text-plus'
 import { formatTerminalText } from '@liquid-labs/terminal-text'
 
 import { assignIfDefined } from './assign-if-defined'
+import { isFormatObject } from './lib/is-format-object'
 
 const getPrinter = (options = {}) => {
   const boundPrint = (...outputs) => {
@@ -20,7 +21,7 @@ const print = (options, ...outputs) => {
   let effectiveOptions = options || {}
   if (outputs.length > 1) {
     const lastOutput = outputs[outputs.length - 1]
-    if (typeof lastOutput === 'object' && lastOutput.__magicPrintOptions === true) {
+    if (isFormatObject(lastOutput)) {
       const overrideOptions = outputs.pop()
       effectiveOptions = assignIfDefined({}, options, overrideOptions)
     }

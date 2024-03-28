@@ -15,7 +15,10 @@
   "keywords": [],
   "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
   "license": "UNLICENSED",
-  "repository": "git+ssh://git@github.com/liquid-labs/magic-print.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/liquid-labs/magic-print.git"
+  },
   "bugs": {
     "url": "https://github.com/liquid-labs/magic-print/issues"
   },

@@ -1,7 +1,7 @@
 const StringOut = class {
   #string = ''
 
-  reset() {
+  reset () {
     this.#string = ''
   }
 

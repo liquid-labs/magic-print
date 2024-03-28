@@ -1,6 +1,10 @@
 const StringOut = class {
   #string = ''
 
+  reset () {
+    this.#string = ''
+  }
+
   write (chunk) {
     this.#string += chunk
   }

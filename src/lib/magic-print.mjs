@@ -48,10 +48,15 @@ const print = (options, ...outputs) => {
       if (format === 'json') {
         out.write(colorizeJSON(output, { pretty : true, colors : { NULL_LITERAL : 'grey' } }))
       } else { // YAML by default
-        const yamlOutput = colorizeYAML(output,
-          { colors : { keys : 'magenta', number : 'green', string : 'yellow', true : 'cyan', false : 'cyan' } })
-          .trim() // colorizeYAML ends with a newline, which is counter to the workings of colorizeJSON and text
-        out.write(yamlOutput)
+        if (Array.isArray(output) && output.length === 0) {
+          out.write('[]') // prettyoutput prints '(empty array)' in this case. Which, we don't want.
+        }
+        else {
+          const yamlOutput = colorizeYAML(output,
+            { colors : { keys : 'magenta', number : 'green', string : 'yellow', true : 'cyan', false : 'cyan' } })
+            .trim() // colorizeYAML ends with a newline, which is counter to the workings of colorizeJSON and text
+          out.write(yamlOutput)
+        }
       }
     } else { // then it's a string
       out.write(wrap(formatTerminalText(output, { noColor }), { width }))

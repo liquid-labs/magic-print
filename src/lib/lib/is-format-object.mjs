@@ -6,7 +6,7 @@ const isFormatObject = (obj) => {
   }
 
   const testResult = omit(obj, ['colors', 'format', 'noColor', 'out', 'rawText', 'separator', 'style', 'width'])
-  return Object.keys(testResult).length === 0
+  return Object.keys(testResult).length === 0 && Object.keys(obj).length > 0
 }
 
 export { isFormatObject }

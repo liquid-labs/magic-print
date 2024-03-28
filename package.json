@@ -12,6 +12,9 @@
     "preversion": "make qa",
     "qa": "make qa"
   },
+  "files": [
+    "dist/*"
+  ],
   "keywords": [],
   "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
   "license": "UNLICENSED",

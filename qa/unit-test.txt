@@ -1,0 +1,21 @@
+Test git rev: f83ad2b968942cc9e60a20395d7bf4c19d4d001c
+PASS lib/test/magic-print.test.js
+PASS lib/test/assign-if-defined.test.js
+PASS lib/lib/test/is-format-object.test.js
+------------------------|---------|----------|---------|---------|-------------------
+File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------------|---------|----------|---------|---------|-------------------
+All files               |   83.72 |    47.22 |   88.88 |   75.86 |                   
+ lib                    |   83.75 |    45.45 |    87.5 |      75 |                   
+  assign-if-defined.mjs |      95 |       75 |     100 |      90 | 5                 
+  magic-print.mjs       |   79.24 |    41.37 |     100 |   70.27 | 23-26,44,48-57    
+  string-out.mjs        |   85.71 |      100 |      75 |      80 | 5                 
+ lib/lib                |   83.33 |    66.66 |     100 |   83.33 |                   
+  is-format-object.mjs  |   83.33 |    66.66 |     100 |   83.33 | 5                 
+------------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 3 passed, 3 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        0.302 s, estimated 1 s
+Ran all test suites.

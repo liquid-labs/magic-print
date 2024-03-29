@@ -19,7 +19,7 @@ const isFormatObject = (obj) => {
     'smartIndent', // wrap-text-plus
     'style',
     'width' // wrap-text-plus
-    ])
+  ])
   return Object.keys(testResult).length === 0 && Object.keys(obj).length > 0
 }
 

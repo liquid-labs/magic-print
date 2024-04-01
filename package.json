@@ -31,7 +31,7 @@
     "json-colorizer": "^2.2.2",
     "lodash": "^4.17.21",
     "prettyoutput": "^1.2.0",
-    "wrap-text-plus": "^1.0.0-alpha.8"
+    "wrap-text-plus": "file:.yalc/wrap-text-plus"
   },
   "devDependencies": {
     "@liquid-labs/sdlc-resource-babel-and-rollup": "^1.0.0-alpha.8",

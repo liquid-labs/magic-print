@@ -35,7 +35,8 @@ const print = (options, ...outputs) => {
     // rawText = false,
     separator = '\n',
     // style,
-    width = 80
+    width = 80,
+    ...downstreamOptions
   } = effectiveOptions
 
   let first = true
@@ -58,7 +59,7 @@ const print = (options, ...outputs) => {
         }
       }
     } else { // then it's a string
-      out.write(wrap(formatTerminalText(output, { noColor }), { width }))
+      out.write(wrap(formatTerminalText(output, { noColor, ...downstreamOptions }), { width, ...downstreamOptions }))
     }
 
     first = false

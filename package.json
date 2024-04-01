@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/liquid-labs/magic-print#readme",
   "dependencies": {
-    "@liquid-labs/terminal-text": "^1.0.0-alpha.3",
+    "@liquid-labs/terminal-text": "^1.0.0-alpha.4",
     "json-colorizer": "^2.2.2",
     "lodash": "^4.17.21",
     "prettyoutput": "^1.2.0",

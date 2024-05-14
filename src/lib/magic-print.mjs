@@ -59,6 +59,7 @@ const print = (options, ...outputs) => {
         }
       }
     } else { // then it's a string
+      // TODO: we assume there's no option overlap...
       out.write(wrap(formatTerminalText(output, { noColor, ...downstreamOptions }), { width, ...downstreamOptions }))
     }
 

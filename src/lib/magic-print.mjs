@@ -12,6 +12,12 @@ const getPrinter = (options = {}) => {
     print(options, ...outputs)
   }
 
+  boundPrint.withOptions = (addOptions) => {
+    const totalOpts = { ...options, ...addOptions }
+    console.log('allowOverflow:', totalOpts.allowOverflow, 'breakSpacesOnly:', totalOpts.breakSpacesOnly)
+    return (...outputs) => print(totalOpts, ...outputs)
+  }
+
   boundPrint.width = options.width || 80
 
   return boundPrint

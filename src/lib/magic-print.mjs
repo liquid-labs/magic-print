@@ -14,7 +14,6 @@ const getPrinter = (options = {}) => {
 
   boundPrint.withOptions = (addOptions) => {
     const totalOpts = { ...options, ...addOptions }
-    console.log('allowOverflow:', totalOpts.allowOverflow, 'breakSpacesOnly:', totalOpts.breakSpacesOnly)
     return (...outputs) => print(totalOpts, ...outputs)
   }
 
